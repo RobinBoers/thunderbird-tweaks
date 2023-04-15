@@ -1,0 +1,3 @@
+#mail-notification-top, :host([value="remoteContent"]) { 
+   display: none !important;
+}

@@ -1,0 +1,72 @@
+/* Set default namespace to XUL */
+@namespace
+url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Set font size in folder pane */
+#folderTree >treechildren::-moz-tree-cell-text {
+    font-size: 12pt !important;
+}
+
+/* Set font size in thread pane */
+#threadTree >treechildren::-moz-tree-cell-text {
+    font-size: 13pt !important;
+}
+
+/* Set height for cells in folder pane */
+#folderTree >treechildren::-moz-tree-row {
+   height: 33px !important;
+}
+
+/* Set height for cells in thread pane */
+#threadTree >treechildren::-moz-tree-row {
+   height: 40px !important;
+}
+
+#threadTree > treecols {
+   font-size: 13pt !important;
+   height: 32px !important;
+   /*background-color: #adadad !important; */
+}
+
+/* Hide remote content warnings on emails */
+notification-message[value="remoteContent"] {
+    --message-bar-background: #ffffff !important;
+}
+
+/* Make subject text bigger */
+mail-headerfield[headerName="subject"] {
+   font-size: 30px !important;
+}
+
+/* Hide subject label */
+#expandedsubjectLabel {
+   display: none !important;
+}
+
+/* Better email actions alignment */
+#header-view-toolbox {
+   display: flex;
+   justify-content: end;
+   padding: 6px;
+}
+
+/* Always hide labels on email actions */
+#header-view-toolbox toolbarbutton label, #hdrSmartReplyButton {
+   display: none !important;
+}
+
+/* Do not hide labels in submenus of email actions */
+#header-view-toolbox toolbarbutton menupopup label {
+    display: revert !important;
+}
+
+/* Text overflow on subject */
+#expandedsubjectBox {
+   overflow: hidden !important;
+   text-overflow: ellipsis !important;
+}
+
+/* Hide weird buttons in tabbar */
+#tabbar-toolbar {
+    display: none !important;
+}
